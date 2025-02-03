@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>国际音标表</title>
+  <link href="./css/tailwind.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      transform: scale(0.85);
+      transform-origin: top center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tooltip {
+      position: absolute;
+      display: none;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -120%);
+      z-index: 10;
+      white-space: nowrap;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .tooltip-container {
+      position: relative;
+      transition: all 0.2s;
+    }
+
+    .tooltip-container:hover {
+      transform: scale(1.05);
+      background: #718096 !important;
+      color: white;
+    }
+
+    .tooltip-container:hover .tooltip {
+      display: block;
+    }
+
+    .phonetic-cell {
+      background: #CBD5E0;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    .category-cell {
+      background: #A0AEC0;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      color: white;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mx-auto px-4 py-8">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-8 text-center">
+        <h1 class="text-4xl font-bold mb-4 text-gray-800">国际音标表</h1>
+        <p class="text-xl text-gray-600">
+          48个国际音标中有20个元音、28个辅音，点击音标即可发音
+        </p>
+      </div>
+
+      <div class="grid grid-cols-8 gap-2 text-center font-medium mb-8">
+        <div class="category-cell flex justify-center items-center row-span-5">
+          元音
+        </div>
+        <div class="category-cell flex justify-center items-center row-span-3">
+          单元音
+        </div>
+        <div class="category-cell">前元音</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/1.mp3"></audio>/i/
+          <div class="tooltip">发音如"衣"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/2.mp3"></audio>/ɪː/
+          <div class="tooltip">发音如"一"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/11.mp3"></audio>/e/
+          <div class="tooltip">发音如"哎"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/12.mp3"></audio>/æ/
+          <div class="tooltip">发音如"诶"</div>
+        </div>
+        <div class="phonetic-cell"></div>
+
+        <div class="category-cell">中元音</div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/10.mp3"></audio>/ɜː/
+          <div class="tooltip">发音如"饿"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/9.mp3"></audio>/ə/
+          <div class="tooltip">发音如轻声"额"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/5.mp3"></audio>/ʌ/
+          <div class="tooltip">发音如"啊"</div>
+        </div>
+        <div class="phonetic-cell"></div>
+
+        <div class="category-cell">后元音</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/4.mp3"></audio>/uː/
+          <div class="tooltip">发音如"乌"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/3.mp3"></audio>/ʊ/
+          <div class="tooltip">发音如"呜"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/8.mp3"></audio>/ɔː/
+          <div class="tooltip">发音如"哦"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/7.mp3"></audio>/ɒ/
+          <div class="tooltip">发音如"奥"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/6.mp3"></audio>/ɑː/
+          <div class="tooltip">发音如"啊"(拉长)</div>
+        </div>
+
+        <div class="category-cell flex justify-center items-center row-span-2">
+          双元音
+        </div>
+        <div class="category-cell">开合双元音</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/20.mp3"></audio>/eɪ/
+          <div class="tooltip">发音如"诶"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/15.mp3"></audio>/aɪ/
+          <div class="tooltip">发音如"爱"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/16.mp3"></audio>/ɔɪ/
+          <div class="tooltip">发音如"欧伊"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/19.mp3"></audio>/aʊ/
+          <div class="tooltip">发音如"奥"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/17.mp3"></audio>/əʊ/
+          <div class="tooltip">发音如"欧"</div>
+        </div>
+
+        <div class="category-cell">集中双元音</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/13.mp3"></audio>/ɪə/
+          <div class="tooltip">发音如"一额"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/18.mp3"></audio>/eə/
+          <div class="tooltip">发音如"哎额"</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./mp3s/14.mp3"></audio>/ʊə/
+          <div class="tooltip">发音如"乌额"</div>
+        </div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell"></div>
+
+        <div class="category-cell flex justify-center items-center" style="grid-row: span 9 / span 9">
+          辅音
+        </div>
+        <div class="category-cell flex justify-center items-center row-span-2">
+          爆破音
+        </div>
+        <div class="category-cell">清辅音</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk18.mp3"></audio>/p/
+          <div class="tooltip">发音如"泼"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk22.mp3"></audio>/t/
+          <div class="tooltip">发音如"特"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk24.mp3"></audio>/k/
+          <div class="tooltip">发音如"克"的声母</div>
+        </div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell"></div>
+
+        <div class="category-cell">浊辅音</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk19.mp3"></audio>/b/
+          <div class="tooltip">发音如"波"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk23.mp3"></audio>/d/
+          <div class="tooltip">发音如"的"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk25.mp3"></audio>/ɡ/
+          <div class="tooltip">发音如"哥"的声母</div>
+        </div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell"></div>
+
+        <div class="category-cell flex justify-center items-center row-span-2">
+          摩擦音
+        </div>
+        <div class="category-cell">清辅音</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk26.mp3"></audio>/f/
+          <div class="tooltip">发音如"夫"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk28.mp3"></audio>/s/
+          <div class="tooltip">发音如"丝"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk32.mp3"></audio>/ʃ/
+          <div class="tooltip">发音如"嘘"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk30.mp3"></audio>/θ/
+          <div class="tooltip">咬住舌尖发"s"音</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk49.mp3"></audio>/h/
+          <div class="tooltip">发音如"呵"的声母</div>
+        </div>
+
+        <div class="category-cell">浊辅音</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk27.mp3"></audio>/v/
+          <div class="tooltip">咬住下唇发"v"音</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk29.mp3"></audio>/z/
+          <div class="tooltip">发音如"资"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/ʒ.mp3"></audio>/ʒ/
+          <div class="tooltip">发音如"日"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk31.mp3"></audio>/ð/
+          <div class="tooltip">咬住舌尖发"z"音</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk40.mp3"></audio>/r/
+          <div class="tooltip">发音如"热"的声母</div>
+        </div>
+
+        <div class="category-cell flex justify-center items-center row-span-2">
+          破擦音
+        </div>
+        <div class="category-cell">清辅音</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk35.mp3"></audio>/tʃ/
+          <div class="tooltip">发音如"吃"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/tr.mp3"></audio>/tr/
+          <div class="tooltip">发音如"吹"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/ts.mp3"></audio>/ts/
+          <div class="tooltip">发音如"次"的声母</div>
+        </div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell"></div>
+
+        <div class="category-cell">浊辅音</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/dʒ.mp3"></audio>/dʒ/
+          <div class="tooltip">发音如"知"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/dr.mp3"></audio>/dr/
+          <div class="tooltip">发音如"猪"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/dz.mp3"></audio>/dz/
+          <div class="tooltip">发音如"兹"的声母</div>
+        </div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell"></div>
+
+        <div class="category-cell">鼻音</div>
+        <div class="category-cell">（浊辅音）</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk42.mp3"></audio>/m/
+          <div class="tooltip">发音如"么"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk44.mp3"></audio>/n/
+          <div class="tooltip">发音如"呢"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk46.mp3"></audio>/ŋ/
+          <div class="tooltip">发音如"昂"的尾音</div>
+        </div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell"></div>
+
+        <div class="category-cell">舌则音</div>
+        <div class="category-cell">（浊辅音）</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk38.mp3"></audio>/l/
+          <div class="tooltip">发音如"乐"的声母</div>
+        </div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell"></div>
+
+        <div class="category-cell">半元音</div>
+        <div class="category-cell">（浊辅音）</div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk47.mp3"></audio>/j/
+          <div class="tooltip">发音如"叶"的声母</div>
+        </div>
+        <div class="phonetic-cell tooltip-container">
+          <audio src="./audio/kk48.mp3"></audio>/w/
+          <div class="tooltip">发音如"我"的声母</div>
+        </div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell"></div>
+        <div class="phonetic-cell"></div>
+      </div>
+
+      <footer class="text-gray-600 text-sm">
+        <p class="text-center">
+          音频来源：<a href="https://www.bilibili.com/video/BV1Y4411M7Ac" class="text-blue-600 hover:underline" target="_blank">BBC经典发音</a>
+          <a href="https://www.bilibili.com/video/BV1iV411z7Nj" class="text-blue-600 hover:underline" target="_blank">英语兔</a>
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    let currentAudio = null;
+    document.querySelectorAll(".tooltip-container").forEach(item => {
+      item.addEventListener('click', function() {
+        if (currentAudio && !currentAudio.paused) {
+          currentAudio.pause();
+          currentAudio.currentTime = 0;
+        }
+        currentAudio = this.querySelector('audio');
+        currentAudio.play();
+      });
+    });
+  </script>
+</body>
+
+</html>
