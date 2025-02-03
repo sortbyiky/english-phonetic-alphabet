@@ -64,6 +64,7 @@
       font-family: 'Noto Sans', sans-serif;
       letter-spacing: 0.02em;
       font-size: 1.1rem;
+      white-space: nowrap;
     }
 
     .phonetic-cell:hover {
@@ -78,6 +79,27 @@
       font-weight: 600;
       text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
       box-shadow: 0 0 15px rgba(128, 128, 128, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+
+      .phonetic-cell {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      .category-cell {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      .grid {
+        gap: 0.5rem;
+      }
     }
   </style>
 </head>
